@@ -44,7 +44,6 @@
     <Compile Include="Entities\TaxjarCategory.cs" />
     <Compile Include="Entities\TaxjarRate.cs" />
     <Compile Include="Entities\TaxjarTax.cs" />
-    <Compile Include="Entities\TaxjarShipping.cs" />
     <Compile Include="Entities\TaxjarLineItem.cs" />
     <Compile Include="Infrastructure\TaxjarException.cs" />
     <Compile Include="Entities\TaxjarOrder.cs" />

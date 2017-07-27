@@ -52,55 +52,55 @@ namespace Taxjar.Tests
 			Assert.AreEqual("destination", rates.TaxSource);
 
 			// Breakdowns
-			Assert.AreEqual(1.5, rates.Breakdown.Shipping.TaxableAmount);
-			Assert.AreEqual(0.11, rates.Breakdown.Shipping.TaxCollectable);
-			Assert.AreEqual(0.07, rates.Breakdown.Shipping.CombinedTaxRate);
-			Assert.AreEqual(1.5, rates.Breakdown.Shipping.StateTaxableAmount);
-			Assert.AreEqual(0.11, rates.Breakdown.Shipping.StateAmount);
-			Assert.AreEqual(0.07, rates.Breakdown.Shipping.StateSalesTaxRate);
-			Assert.AreEqual(0, rates.Breakdown.Shipping.CountyTaxableAmount);
-			Assert.AreEqual(0, rates.Breakdown.Shipping.CountyAmount);
-			Assert.AreEqual(0, rates.Breakdown.Shipping.CountyTaxRate);
-			Assert.AreEqual(0, rates.Breakdown.Shipping.CityTaxableAmount);
-			Assert.AreEqual(0, rates.Breakdown.Shipping.CityAmount);
-			Assert.AreEqual(0, rates.Breakdown.Shipping.CityTaxRate);
-			Assert.AreEqual(0, rates.Breakdown.Shipping.SpecialDistrictTaxableAmount);
-			Assert.AreEqual(0, rates.Breakdown.Shipping.SpecialDistrictAmount);
-			Assert.AreEqual(0, rates.Breakdown.Shipping.SpecialDistrictTaxRate);
+			Assert.AreEqual(1.5, rates.ShippingBreakdown.TaxableAmount);
+			Assert.AreEqual(0.11, rates.ShippingBreakdown.TaxCollectable);
+			Assert.AreEqual(0.07, rates.ShippingBreakdown.CombinedTaxRate);
+			Assert.AreEqual(1.5, rates.ShippingBreakdown.StateTaxableAmount);
+			Assert.AreEqual(0.11, rates.ShippingBreakdown.StateAmount);
+			Assert.AreEqual(0.07, rates.ShippingBreakdown.StateSalesTaxRate);
+			Assert.AreEqual(0, rates.ShippingBreakdown.CountyTaxableAmount);
+			Assert.AreEqual(0, rates.ShippingBreakdown.CountyAmount);
+			Assert.AreEqual(0, rates.ShippingBreakdown.CountyTaxRate);
+			Assert.AreEqual(0, rates.ShippingBreakdown.CityTaxableAmount);
+			Assert.AreEqual(0, rates.ShippingBreakdown.CityAmount);
+			Assert.AreEqual(0, rates.ShippingBreakdown.CityTaxRate);
+			Assert.AreEqual(0, rates.ShippingBreakdown.SpecialDistrictTaxableAmount);
+			Assert.AreEqual(0, rates.ShippingBreakdown.SpecialDistrictAmount);
+			Assert.AreEqual(0, rates.ShippingBreakdown.SpecialDistrictTaxRate);
 
-			Assert.AreEqual(16.5, rates.Breakdown.TaxableAmount);
-			Assert.AreEqual(1.16, rates.Breakdown.TaxCollectable);
-			Assert.AreEqual(0.07, rates.Breakdown.CombinedTaxRate);
-			Assert.AreEqual(16.5, rates.Breakdown.StateTaxableAmount);
-			Assert.AreEqual(0.07, rates.Breakdown.StateTaxRate);
-			Assert.AreEqual(1.16, rates.Breakdown.StateTaxCollectable);
-			Assert.AreEqual(0, rates.Breakdown.CountyTaxableAmount);
-			Assert.AreEqual(0, rates.Breakdown.CountyTaxRate);
-			Assert.AreEqual(0, rates.Breakdown.CountyTaxCollectable);
-			Assert.AreEqual(0, rates.Breakdown.CityTaxableAmount);
-			Assert.AreEqual(0, rates.Breakdown.CityTaxRate);
-			Assert.AreEqual(0, rates.Breakdown.CityTaxCollectable);
-			Assert.AreEqual(0, rates.Breakdown.SpecialDistrictTaxableAmount);
-			Assert.AreEqual(0, rates.Breakdown.SpecialDistrictTaxRate);
-			Assert.AreEqual(0, rates.Breakdown.SpecialDistrictTaxCollectable);
+			Assert.AreEqual(16.5, rates.OrderBreakdown.TaxableAmount);
+			Assert.AreEqual(1.16, rates.OrderBreakdown.TaxCollectable);
+			Assert.AreEqual(0.07, rates.OrderBreakdown.CombinedTaxRate);
+			Assert.AreEqual(16.5, rates.OrderBreakdown.StateTaxableAmount);
+			Assert.AreEqual(0.07, rates.OrderBreakdown.StateTaxRate);
+			Assert.AreEqual(1.16, rates.OrderBreakdown.StateTaxCollectable);
+			Assert.AreEqual(0, rates.OrderBreakdown.CountyTaxableAmount);
+			Assert.AreEqual(0, rates.OrderBreakdown.CountyTaxRate);
+			Assert.AreEqual(0, rates.OrderBreakdown.CountyTaxCollectable);
+			Assert.AreEqual(0, rates.OrderBreakdown.CityTaxableAmount);
+			Assert.AreEqual(0, rates.OrderBreakdown.CityTaxRate);
+			Assert.AreEqual(0, rates.OrderBreakdown.CityTaxCollectable);
+			Assert.AreEqual(0, rates.OrderBreakdown.SpecialDistrictTaxableAmount);
+			Assert.AreEqual(0, rates.OrderBreakdown.SpecialDistrictTaxRate);
+			Assert.AreEqual(0, rates.OrderBreakdown.SpecialDistrictTaxCollectable);
 
 			// Line Items
-			Assert.AreEqual("1", rates.Breakdown.LineItems[0].Id);
-			Assert.AreEqual(15, rates.Breakdown.LineItems[0].TaxableAmount);
-			Assert.AreEqual(1.05, rates.Breakdown.LineItems[0].TaxCollectable);
-			Assert.AreEqual(0.07, rates.Breakdown.LineItems[0].CombinedTaxRate);
-			Assert.AreEqual(15, rates.Breakdown.LineItems[0].StateTaxableAmount);
-			Assert.AreEqual(0.07, rates.Breakdown.LineItems[0].StateSalesTaxRate);
-			Assert.AreEqual(1.05, rates.Breakdown.LineItems[0].StateAmount);
-			Assert.AreEqual(0, rates.Breakdown.LineItems[0].CountyTaxableAmount);
-			Assert.AreEqual(0, rates.Breakdown.LineItems[0].CountyTaxRate);
-			Assert.AreEqual(0, rates.Breakdown.LineItems[0].CountyAmount);
-			Assert.AreEqual(0, rates.Breakdown.LineItems[0].CityTaxableAmount);
-			Assert.AreEqual(0, rates.Breakdown.LineItems[0].CityTaxRate);
-			Assert.AreEqual(0, rates.Breakdown.LineItems[0].CityAmount);
-			Assert.AreEqual(0, rates.Breakdown.LineItems[0].SpecialDistrictTaxableAmount);
-			Assert.AreEqual(0, rates.Breakdown.LineItems[0].SpecialTaxRate);
-			Assert.AreEqual(0, rates.Breakdown.LineItems[0].SpecialDistrictAmount);
+			Assert.AreEqual("1", rates.LineItems[0].Id);
+			Assert.AreEqual(15, rates.LineItems[0].TaxableAmount);
+			Assert.AreEqual(1.05, rates.LineItems[0].TaxCollectable);
+			Assert.AreEqual(0.07, rates.LineItems[0].CombinedTaxRate);
+			Assert.AreEqual(15, rates.LineItems[0].StateTaxableAmount);
+			Assert.AreEqual(0.07, rates.LineItems[0].StateSalesTaxRate);
+			Assert.AreEqual(1.05, rates.LineItems[0].StateAmount);
+			Assert.AreEqual(0, rates.LineItems[0].CountyTaxableAmount);
+			Assert.AreEqual(0, rates.LineItems[0].CountyTaxRate);
+			Assert.AreEqual(0, rates.LineItems[0].CountyAmount);
+			Assert.AreEqual(0, rates.LineItems[0].CityTaxableAmount);
+			Assert.AreEqual(0, rates.LineItems[0].CityTaxRate);
+			Assert.AreEqual(0, rates.LineItems[0].CityAmount);
+			Assert.AreEqual(0, rates.LineItems[0].SpecialDistrictTaxableAmount);
+			Assert.AreEqual(0, rates.LineItems[0].SpecialTaxRate);
+			Assert.AreEqual(0, rates.LineItems[0].SpecialDistrictAmount);
 		}
 
 		[Test]
@@ -136,27 +136,27 @@ namespace Taxjar.Tests
 			Assert.AreEqual("destination", rates.TaxSource);
 
 			// Breakdowns
-			Assert.AreEqual(26.95, rates.Breakdown.TaxableAmount);
-			Assert.AreEqual(6.47, rates.Breakdown.TaxCollectable);
-			Assert.AreEqual(0.24, rates.Breakdown.CombinedTaxRate);
-			Assert.AreEqual(26.95, rates.Breakdown.CountryTaxableAmount);
-			Assert.AreEqual(0.24, rates.Breakdown.CountryTaxRate);
-			Assert.AreEqual(6.47, rates.Breakdown.CountryTaxCollectable);
+			Assert.AreEqual(26.95, rates.OrderBreakdown.TaxableAmount);
+			Assert.AreEqual(6.47, rates.OrderBreakdown.TaxCollectable);
+			Assert.AreEqual(0.24, rates.OrderBreakdown.CombinedTaxRate);
+			Assert.AreEqual(26.95, rates.OrderBreakdown.CountryTaxableAmount);
+			Assert.AreEqual(0.24, rates.OrderBreakdown.CountryTaxRate);
+			Assert.AreEqual(6.47, rates.OrderBreakdown.CountryTaxCollectable);
 
-			Assert.AreEqual(10, rates.Breakdown.Shipping.TaxableAmount);
-			Assert.AreEqual(2.4, rates.Breakdown.Shipping.TaxCollectable);
-			Assert.AreEqual(0.24, rates.Breakdown.Shipping.CombinedTaxRate);
-			Assert.AreEqual(10, rates.Breakdown.Shipping.CountryTaxableAmount);
-			Assert.AreEqual(0.24, rates.Breakdown.Shipping.CountryTaxRate);
-			Assert.AreEqual(2.4, rates.Breakdown.Shipping.CountryTaxCollectable);
+			Assert.AreEqual(10, rates.ShippingBreakdown.TaxableAmount);
+			Assert.AreEqual(2.4, rates.ShippingBreakdown.TaxCollectable);
+			Assert.AreEqual(0.24, rates.ShippingBreakdown.CombinedTaxRate);
+			Assert.AreEqual(10, rates.ShippingBreakdown.CountryTaxableAmount);
+			Assert.AreEqual(0.24, rates.ShippingBreakdown.CountryTaxRate);
+			Assert.AreEqual(2.4, rates.ShippingBreakdown.CountryTaxCollectable);
 
 			// Line Items
-			Assert.AreEqual(16.95, rates.Breakdown.LineItems[0].TaxableAmount);
-			Assert.AreEqual(4.07, rates.Breakdown.LineItems[0].TaxCollectable);
-			Assert.AreEqual(0.24, rates.Breakdown.LineItems[0].CombinedTaxRate);
-			Assert.AreEqual(16.95, rates.Breakdown.LineItems[0].CountryTaxableAmount);
-			Assert.AreEqual(0.24, rates.Breakdown.LineItems[0].CountryTaxRate);
-			Assert.AreEqual(4.07, rates.Breakdown.LineItems[0].CountryTaxCollectable);
+			Assert.AreEqual(16.95, rates.LineItems[0].TaxableAmount);
+			Assert.AreEqual(4.07, rates.LineItems[0].TaxCollectable);
+			Assert.AreEqual(0.24, rates.LineItems[0].CombinedTaxRate);
+			Assert.AreEqual(16.95, rates.LineItems[0].CountryTaxableAmount);
+			Assert.AreEqual(0.24, rates.LineItems[0].CountryTaxRate);
+			Assert.AreEqual(4.07, rates.LineItems[0].CountryTaxCollectable);
 		}
 
 		[Test]
@@ -197,45 +197,45 @@ namespace Taxjar.Tests
 			Assert.AreEqual("destination", rates.TaxSource);
 
 			// Breakdowns
-			Assert.AreEqual(26.95, rates.Breakdown.TaxableAmount);
-			Assert.AreEqual(3.5, rates.Breakdown.TaxCollectable);
-			Assert.AreEqual(0.13, rates.Breakdown.CombinedTaxRate);
-			Assert.AreEqual(26.95, rates.Breakdown.GSTTaxableAmount);
-			Assert.AreEqual(0.05, rates.Breakdown.GSTTaxRate);
-			Assert.AreEqual(1.35, rates.Breakdown.GST);
-			Assert.AreEqual(26.95, rates.Breakdown.PSTTaxableAmount);
-			Assert.AreEqual(0.08, rates.Breakdown.PSTTaxRate);
-			Assert.AreEqual(2.16, rates.Breakdown.PST);
-			Assert.AreEqual(0, rates.Breakdown.QSTTaxableAmount);
-			Assert.AreEqual(0, rates.Breakdown.QSTTaxRate);
-			Assert.AreEqual(0, rates.Breakdown.QST);
+			Assert.AreEqual(26.95, rates.OrderBreakdown.TaxableAmount);
+			Assert.AreEqual(3.5, rates.OrderBreakdown.TaxCollectable);
+			Assert.AreEqual(0.13, rates.OrderBreakdown.CombinedTaxRate);
+			Assert.AreEqual(26.95, rates.OrderBreakdown.GSTTaxableAmount);
+			Assert.AreEqual(0.05, rates.OrderBreakdown.GSTTaxRate);
+			Assert.AreEqual(1.35, rates.OrderBreakdown.GST);
+			Assert.AreEqual(26.95, rates.OrderBreakdown.PSTTaxableAmount);
+			Assert.AreEqual(0.08, rates.OrderBreakdown.PSTTaxRate);
+			Assert.AreEqual(2.16, rates.OrderBreakdown.PST);
+			Assert.AreEqual(0, rates.OrderBreakdown.QSTTaxableAmount);
+			Assert.AreEqual(0, rates.OrderBreakdown.QSTTaxRate);
+			Assert.AreEqual(0, rates.OrderBreakdown.QST);
 
-			Assert.AreEqual(10, rates.Breakdown.Shipping.TaxableAmount);
-			Assert.AreEqual(1.3, rates.Breakdown.Shipping.TaxCollectable);
-			Assert.AreEqual(0.13, rates.Breakdown.Shipping.CombinedTaxRate);
-			Assert.AreEqual(10, rates.Breakdown.Shipping.GSTTaxableAmount);
-			Assert.AreEqual(0.05, rates.Breakdown.Shipping.GSTTaxRate);
-			Assert.AreEqual(0.5, rates.Breakdown.Shipping.GST);
-			Assert.AreEqual(10, rates.Breakdown.Shipping.PSTTaxableAmount);
-			Assert.AreEqual(0.08, rates.Breakdown.Shipping.PSTTaxRate);
-			Assert.AreEqual(0.8, rates.Breakdown.Shipping.PST);
-			Assert.AreEqual(0, rates.Breakdown.Shipping.QSTTaxableAmount);
-			Assert.AreEqual(0, rates.Breakdown.Shipping.QSTTaxRate);
-			Assert.AreEqual(0, rates.Breakdown.Shipping.QST);
+			Assert.AreEqual(10, rates.ShippingBreakdown.TaxableAmount);
+			Assert.AreEqual(1.3, rates.ShippingBreakdown.TaxCollectable);
+			Assert.AreEqual(0.13, rates.ShippingBreakdown.CombinedTaxRate);
+			Assert.AreEqual(10, rates.ShippingBreakdown.GSTTaxableAmount);
+			Assert.AreEqual(0.05, rates.ShippingBreakdown.GSTTaxRate);
+			Assert.AreEqual(0.5, rates.ShippingBreakdown.GST);
+			Assert.AreEqual(10, rates.ShippingBreakdown.PSTTaxableAmount);
+			Assert.AreEqual(0.08, rates.ShippingBreakdown.PSTTaxRate);
+			Assert.AreEqual(0.8, rates.ShippingBreakdown.PST);
+			Assert.AreEqual(0, rates.ShippingBreakdown.QSTTaxableAmount);
+			Assert.AreEqual(0, rates.ShippingBreakdown.QSTTaxRate);
+			Assert.AreEqual(0, rates.ShippingBreakdown.QST);
 
 			// Line Items
-			Assert.AreEqual(16.95, rates.Breakdown.LineItems[0].TaxableAmount);
-			Assert.AreEqual(2.2, rates.Breakdown.LineItems[0].TaxCollectable);
-			Assert.AreEqual(0.13, rates.Breakdown.LineItems[0].CombinedTaxRate);
-			Assert.AreEqual(16.95, rates.Breakdown.LineItems[0].GSTTaxableAmount);
-			Assert.AreEqual(0.05, rates.Breakdown.LineItems[0].GSTTaxRate);
-			Assert.AreEqual(0.85, rates.Breakdown.LineItems[0].GST);
-			Assert.AreEqual(16.95, rates.Breakdown.LineItems[0].PSTTaxableAmount);
-			Assert.AreEqual(0.08, rates.Breakdown.LineItems[0].PSTTaxRate);
-			Assert.AreEqual(1.36, rates.Breakdown.LineItems[0].PST);
-			Assert.AreEqual(0, rates.Breakdown.LineItems[0].QSTTaxableAmount);
-			Assert.AreEqual(0, rates.Breakdown.LineItems[0].QSTTaxRate);
-			Assert.AreEqual(0, rates.Breakdown.LineItems[0].QST);
+			Assert.AreEqual(16.95, rates.LineItems[0].TaxableAmount);
+			Assert.AreEqual(2.2, rates.LineItems[0].TaxCollectable);
+			Assert.AreEqual(0.13, rates.LineItems[0].CombinedTaxRate);
+			Assert.AreEqual(16.95, rates.LineItems[0].GSTTaxableAmount);
+			Assert.AreEqual(0.05, rates.LineItems[0].GSTTaxRate);
+			Assert.AreEqual(0.85, rates.LineItems[0].GST);
+			Assert.AreEqual(16.95, rates.LineItems[0].PSTTaxableAmount);
+			Assert.AreEqual(0.08, rates.LineItems[0].PSTTaxRate);
+			Assert.AreEqual(1.36, rates.LineItems[0].PST);
+			Assert.AreEqual(0, rates.LineItems[0].QSTTaxableAmount);
+			Assert.AreEqual(0, rates.LineItems[0].QSTTaxRate);
+			Assert.AreEqual(0, rates.LineItems[0].QST);
 		}
 	}
 }
